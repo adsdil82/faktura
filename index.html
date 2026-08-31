@@ -1,0 +1,70 @@
+<!--
+FILE: index.html
+VAZIFASI:
+- Фойдаланувчи интерфейси
+- Фактура маълумотлари киритиш
+- Жадвал тартиб рақамининг бошланғич қийматини қабул қилиш
+- CSS ва JS файлларни улаш
+
+ESLATMA:
+- Бу файлда ҲИСОБ-КИТОБ йўқ
+- Фақат HTML структура
+-->
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Faktura → XLS OFFLINE (Auto accounts)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>Фактура маълумотлари</h2>
+
+  Фактура санаси:
+  <input type="date" id="date"><br>
+
+  Фактура раками:
+  <input type="text" id="invoiceNo" placeholder="№"><br>
+
+  <!-- 🔴 ЯНГИ: Жадвал тартиб рақамининг бошланғич қиймати -->
+  Жадвал бошланғич рақами (N):
+  <input type="number" id="startNo" value="101"><br>
+
+  Фактура тури:
+  <select id="type">
+    <option value="Гаров реестр">Гаров реестр</option>
+    <option value="КАТМ">КАТМ</option>
+    <option value="АдлияОАКТМ">Адлия</option>
+  </select><br>
+
+  Умумий суммаси:
+  <input type="number" id="total" placeholder="Суммани киритинг">
+
+  <table id="tbl">
+    <thead>
+      <tr>
+        <th>N</th>
+        <th>Filial</th>
+        <th>Фойдаланиш сони</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">ИТОГ</td>
+        <td id="sumCnt">0</td>
+        <td id="sumAmt">0.00</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <button id="exportBtn">📥 Шаблон экспорт</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
