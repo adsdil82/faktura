@@ -1,71 +1,41 @@
 /*
 FILE: style.css
-VAZIFASI:
-- Ташқи кўриниш (UI)
-- Excel экспортига таъсири йўқ
-- Хавфсиз ўзгартириш мумкин
 
-ESLATMA:
-- Логикага тегмаслик керак
+VAZIFASI:
+- UI dizayn
+- Excel eksportiga ta'siri yo'q
+- Faqat tashqi ko'rinish
 */
 
-body{
-  font-family:Segoe UI,Arial;
-  background:#eef2f7;
-  padding:24px
+
+/* =========================
+   ASOSIY SAHIFA
+========================= */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eef2f7;
+  padding: 24px;
+  margin: 0;
 }
 
-.card{
-  background:#fff;
-  padding:20px;
-  border-radius:14px;
-  box-shadow:0 12px 30px rgba(0,0,0,.08)
+
+/* =========================
+   ASOSIY KARTA
+========================= */
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-input,select{
-  padding:8px;
-  margin:4px 0;
-  width:240px;
-  border-radius:6px;
-  border:1px solid #cbd5e1
-}
 
-table{
-  width:70%;
-  border-collapse:collapse;
-  margin-top:15px
-}
+/* =========================
+   FORMA
+========================= */
 
-th,td{
-  border:1px solid #cfd8dc;
-  padding:6px;
-  text-align:center
-}
-
-th{
-  background:#f1f5f9
-}
-
-tfoot td{
-  background:#f8fafc;
-  font-weight:bold
-}
-
-button{
-  margin-top:15px;
-  padding:12px 22px;
-  background:#2563eb;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  cursor:pointer
-}
-
-.count{
-  width:90px;
-  text-align:center
-}
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -87,11 +57,39 @@ button{
 .form-group select {
   width: 100%;
   max-width: 350px;
+  height: 42px;
   box-sizing: border-box;
-  padding: 10px 12px;
+
+  padding: 8px 12px;
+
   border: 1px solid #cbd5e1;
   border-radius: 6px;
+
   font-size: 15px;
+  background: #fff;
+}
+
+
+/* =========================
+   TUGMA
+========================= */
+
+button {
+  margin-top: 15px;
+  padding: 12px 22px;
+
+  background: #2563eb;
+  color: #fff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
 }
 
 .button-group {
@@ -100,5 +98,62 @@ button{
 
 .button-group button {
   height: 42px;
-  cursor: pointer;
+}
+
+
+/* =========================
+   JADVAL
+========================= */
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  border: 1px solid #cfd8dc;
+  padding: 6px;
+  text-align: center;
+}
+
+th {
+  background: #f1f5f9;
+}
+
+tfoot td {
+  background: #f8fafc;
+  font-weight: bold;
+}
+
+
+/* =========================
+   MAXSUS INPUT
+========================= */
+
+.count {
+  width: 90px;
+  text-align: center;
+}
+
+
+/* =========================
+   MOBIL MOSLASHUV
+========================= */
+
+@media (max-width: 700px) {
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group input,
+  .form-group select {
+    max-width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
 }
