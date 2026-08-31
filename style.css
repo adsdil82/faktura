@@ -1,0 +1,68 @@
+/*
+FILE: style.css
+VAZIFASI:
+- Ташқи кўриниш (UI)
+- Excel экспортига таъсири йўқ
+- Хавфсиз ўзгартириш мумкин
+
+ESLATMA:
+- Логикага тегмаслик керак
+*/
+
+body{
+  font-family:Segoe UI,Arial;
+  background:#eef2f7;
+  padding:24px
+}
+
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08)
+}
+
+input,select{
+  padding:8px;
+  margin:4px 0;
+  width:240px;
+  border-radius:6px;
+  border:1px solid #cbd5e1
+}
+
+table{
+  width:70%;
+  border-collapse:collapse;
+  margin-top:15px
+}
+
+th,td{
+  border:1px solid #cfd8dc;
+  padding:6px;
+  text-align:center
+}
+
+th{
+  background:#f1f5f9
+}
+
+tfoot td{
+  background:#f8fafc;
+  font-weight:bold
+}
+
+button{
+  margin-top:15px;
+  padding:12px 22px;
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer
+}
+
+.count{
+  width:90px;
+  text-align:center
+}
