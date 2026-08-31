@@ -23,27 +23,44 @@ ESLATMA:
 <div class="card">
   <h2>Фактура маълумотлари</h2>
 
-  Фактура санаси:
-  <input type="date" id="date"><br>
+  <div class="form-grid">
 
-  Фактура раками:
-  <input type="text" id="invoiceNo" placeholder="№"><br>
+    <div class="form-group">
+      <label for="date">Фактура санаси:</label>
+      <input type="date" id="date">
+    </div>
 
-  <!-- 🔴 ЯНГИ: Жадвал тартиб рақамининг бошланғич қиймати -->
-  Жадвал бошланғич рақами (N):
-  <input type="number" id="startNo" value="101"><br>
+    <div class="form-group">
+      <label for="invoiceNo">Фактура рақами:</label>
+      <input type="text" id="invoiceNo" placeholder="№">
+    </div>
 
-  Фактура тури:
-  <select id="type">
-    <option value="Гаров реестр">Гаров реестр</option>
-    <option value="КАТМ">КАТМ</option>
-    <option value="АдлияОАКТМ">Адлия</option>
-    <option value="TRANS-INSSURANT">Sugurta</option>
-  </select><br>
+    <div class="form-group">
+      <label for="startNo">Жадвал бошланғич рақами (N):</label>
+      <input type="number" id="startNo" value="101">
+    </div>
 
-  Умумий суммаси:
-  <input type="number" id="total" placeholder="Суммани киритинг">
-<button id="exportBtn">📥 Шаблон экспорт</button>
+    <div class="form-group">
+      <label for="type">Фактура тури:</label>
+      <select id="type">
+        <option value="Гаров реестр">Гаров реестр</option>
+        <option value="КАТМ">КАТМ</option>
+        <option value="АдлияОАКТМ">Адлия</option>
+        <option value="TRANS-INSSURANT">Sugurta</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="total">Умумий суммаси:</label>
+      <input type="number" id="total" placeholder="Суммани киритинг">
+    </div>
+
+    <div class="form-group button-group">
+      <button id="exportBtn">📥 Шаблон экспорт</button>
+    </div>
+
+  </div>
+
   <table id="tbl">
     <thead>
       <tr>
@@ -53,7 +70,9 @@ ESLATMA:
         <th>Amount</th>
       </tr>
     </thead>
+
     <tbody></tbody>
+
     <tfoot>
       <tr>
         <td colspan="2">ИТОГ</td>
@@ -62,8 +81,9 @@ ESLATMA:
       </tr>
     </tfoot>
   </table>
+</div>
 
-  <button id="exportBtn">📥 Шаблон экспорт</button>
+ <!-- <button id="exportBtn">📥 Шаблон экспорт</button> -->
 </div>
 
 <script src="app.js"></script>
